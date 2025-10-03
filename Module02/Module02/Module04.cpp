@@ -10,7 +10,7 @@ int main() {
 	std::cout << "Standart IF/ELSE" << std::endl;
 
 	//Standart way
-	if ((in_var >= 0)&&((in_var % 10) == 0)) {
+	if ((in_var >= 0)&&((in_var % 2) == 0)) {
 		int in_var_temp = in_var << 2;
 		std::cout << in_var_temp;
 	}
@@ -23,7 +23,7 @@ int main() {
 
 	std::cout << std::endl << "Tern output" << std::endl;
 
-	int in_var_temp = ((in_var >= 0) && ((in_var % 10) == 0)) ? in_var << 2 : in_var >> 2;
+	int in_var_temp = ((in_var >= 0) && ((in_var % 2) == 0)) ? in_var << 2 : in_var >> 2;
 
 	std::cout << in_var_temp;
 
