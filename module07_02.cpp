@@ -1,24 +1,6 @@
 #include "iostream"
-
-int weak_sum(const std::weak_ptr<int[]>& weak_arr, unsigned int size) {
-	if (auto shared_arr = weak_arr.lock()) { //Check.
-		int sum = 0;
-		for (int i = 0; i < size; ++i) {
-			sum += shared_arr[i];
-		}
-		return sum;
-	}
-	else {
-		return -1;
-	}
-}
-int weak_min(const std::weak_ptr<int[]>& weak_arr, unsigned int size) {
-
-}
-int weak_max(const std::weak_ptr<int[]>& weak_arr, unsigned int size) {
-
-}
-
+#include "module07_02_weak_class.h"
+#include "minmax.h"
 
 int main() {
 
@@ -33,9 +15,17 @@ int main() {
 		std::cout << "\n";
 	}
 
-	for (int i = 0; i < n; i++) {
-		std::cout << arr_ptr[i];
-	}
+	weak_class weak_arr(arr_ptr, n);
+
+	minmax mini_max;
+
+	mini_max = weak_arr.get_minmax();
+
+	std::cout << " " << mini_max.min << "Minimum" << mini_max.max << "\n";
+
+	std::cout << weak_arr.get_sum() << "\n";
+
+	weak_arr.print_arr();
 
 	return(0);
 }
