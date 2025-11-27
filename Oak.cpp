@@ -18,7 +18,7 @@ void Oak::wind() {
     std::cout << "Tree name : " << getName() << "\n" << "Tree type : Oak \n";
 }
 
-// —татический метод дл€ получени€ количества дубов
 unsigned int Oak::getOakCount() {
     return _oak_counter;
+
 }
