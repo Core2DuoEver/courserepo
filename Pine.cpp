@@ -18,7 +18,7 @@ void Pine::wind() {
     std::cout << "Tree name : " << getName() << "\n" << "Tree type : Pine \n";
 }
 
-// —татический метод дл€ получени€ количества дубов
 unsigned int Pine::getPineCount() {
     return _pine_counter;
+
 }
