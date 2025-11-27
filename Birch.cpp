@@ -18,7 +18,7 @@ void Birch::wind() {
     std::cout << "Tree name : " << getName() << "\n" << "Tree type : Birch \n";
 }
 
-// —татический метод дл€ получени€ количества дубов
 unsigned int Birch::getBirchCount() {
     return _birch_counter;
+
 }
