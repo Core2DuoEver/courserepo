@@ -18,7 +18,7 @@ void Spruce::wind() {
     std::cout << "Tree name : " << getName() << "\n" << "Tree type : Spruce \n";
 }
 
-// —татический метод дл€ получени€ количества дубов
 unsigned int Spruce::getSpruceCount() {
     return _spruce_counter;
+
 }
